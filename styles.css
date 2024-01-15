@@ -37,11 +37,18 @@ nav a {
   font-size: 19px;
 }
 
+.logo {
+  height: 75px;
+  width: auto;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.8vh !important;
+  padding-top: 1.8vh;
+  padding-left: 2.8vh;
+  padding-right: 2.8vh;
   margin-left: 4vw;
   margin-right: 4vw;
 }
@@ -134,14 +141,59 @@ main {
   height: 100%;
 }
 */
+
+
 .gridParent {
   display: flex;
   justify-content: center;
+  width: 98vw;
+}
+
+.grid {
+  width: 1025px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.projectsPhoto img {
+  transition: all 0.5s ease-out;
+}
+
+.projectsPhoto:hover img {
+  box-shadow: -8px 9px 18px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -8px 9px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -8px 9px 18px 0px rgba(0,0,0,0.75);
+}
+
+.projectsPhoto img {
+  border-radius: 15px;
+}
+
+.projectsPhoto img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.homefarmGrid {
+  grid-area: 1 / 1 / span 2 / span 2;
+}
+
+
+/*
+.gridParent {
+  display: flex;
+  justify-content: center;
+  border: 1px red solid;
 }
 
 .grid {
   display: grid;
   height: 500px;
+  width: 55%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   column-gap: 30px;
@@ -175,18 +227,23 @@ img.homefarmImage:hover {
 .homefarmGrid {
   grid-area: 1 / 1 / span 2 / span 2;
 }
+*/
+
+
 
 .projectHeader {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background: #7AE063;
   background: radial-gradient(at left top, #7AE063 0%, #010101 60%);
-  background-color: black;
   min-height: 100dvh;
   flex-wrap: wrap;
   align-items: flex-start;
   overflow-y: visible;
+}
+
+.bdabHeader {
+  background: radial-gradient(at left top, #407eaf 0%, #010101 60%) !important;
 }
 
 .top {
@@ -362,6 +419,10 @@ nav a:hover {
   max-width: 50%;
 }
 
+.projBodyRight .margin{
+  margin-bottom: 10px;
+}
+
 .toast {
   width: 100%;
   display: flex;
@@ -464,7 +525,7 @@ nav a:hover {
   text-align: center;
   background: #335D29;
   font-weight: bold;
-  width: 12%;
+  width: 16.65%;
   justify-content: center;
   color: white;
   border: white 1px solid;
@@ -536,15 +597,20 @@ nav a:hover {
 
 .prodImg {
   width: 100vw;
-  height: 75vh;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .prodImg h1 {
-  text-align: center;
+  margin-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vw;
   height: fit-content;
+  font-style: italic;
 }
 
 .prodImgChild {
@@ -553,10 +619,9 @@ nav a:hover {
   width: 75vw;
   height: 90%;
   position: relative;
-  top: 50%;
+  margin-top: 25px;
   display: inline-flex;
   overflow-x: scroll;
-  transform: translateY(-50%);
 }
 
 .prodImgChild img {
