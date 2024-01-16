@@ -26,7 +26,7 @@ p {
 }
 
 nav a:hover, .selected {
-  color: maroon;
+  color: maroon !important;
 }
 
 nav a {
@@ -178,6 +178,10 @@ main {
   object-fit: cover;
 }
 
+.dataImg {
+  object-position: bottom;
+}
+
 .homefarmGrid {
   grid-area: 1 / 1 / span 2 / span 2;
 }
@@ -230,7 +234,6 @@ img.homefarmImage:hover {
 */
 
 
-
 .projectHeader {
   display: flex;
   justify-content: space-around;
@@ -244,6 +247,10 @@ img.homefarmImage:hover {
 
 .bdabHeader {
   background: radial-gradient(at left top, #407eaf 0%, #010101 60%) !important;
+}
+
+.conHeader {
+  background: radial-gradient(at left top, #5D737E 0%, #010101 60%) !important;
 }
 
 .top {
@@ -276,7 +283,8 @@ img.homefarmImage:hover {
   margin-top: 12px;
 }
 
-.homefarmRight span {
+.homefarmRight span,
+.homefarmRight a {
   color: darkgrey
 }
 
@@ -291,6 +299,10 @@ img.homefarmImage:hover {
   height: 500px;
   width: auto;
   background-color: transparent;
+}
+
+.bdabCurve {
+  border-radius: 15px;
 }
 
 .lineBreak {
@@ -378,7 +390,9 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.8vh !important;
+  padding-top: 2.8vh !important;
+  padding-right: 2.8vh !important;
+  padding-left: 2.8vh !important;
   width: 100%; 
   background-color: transparent;
   margin-left: 4vw;
@@ -525,7 +539,7 @@ nav a:hover {
   text-align: center;
   background: #335D29;
   font-weight: bold;
-  width: 16.65%;
+  width: 20%;
   justify-content: center;
   color: white;
   border: white 1px solid;
@@ -571,28 +585,24 @@ nav a:hover {
   background: #5CA84A;
 }
 
-.undConstruct {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.undConstructChild {
-  width: 50%;
+.topCon {
+  width: 70%;
   text-align: center;
+  margin-bottom: 75px;
 }
 
-.undConstructChild .loadingImage {
-  height: 200px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+.topCon h1,
+.topCon p {
+  color: lightgray;
 }
 
-.undConstructChild .loadingImage img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.topCon h1 {
+  font-size: 90px;
+}
+
+.topCon p {
+  margin-top: 20px;
+  font-size: 30px !important;
 }
 
 .prodImg {
