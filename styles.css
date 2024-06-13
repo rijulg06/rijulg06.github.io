@@ -707,3 +707,34 @@ nav a:hover {
 #slider-image-5:target ~.image-container {
   left:-4324px;
 } */
+
+.todayIWhole {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todayIBlock {
+  width: 1100px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.todayIPicNonWrap img {
+  height: 250px;
+  padding-top: 7px;
+  padding-right: 10px;
+}
+
+.todayIPicNonWrap div {
+  width: 400px;
+}
+
+.todayIPicNonWrap {
+  display: inline-flex;
+  /* ADD?? */
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
