@@ -153,10 +153,14 @@ main {
   width: 1025px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 250px);
+  grid-template-rows: repeat(3, 250px);
   column-gap: 20px;
   row-gap: 20px;
-}
+  grid-template-areas:
+    "largeGrid largeGrid smallGrid"
+    "largeGrid largeGrid smallGrid"
+    "smallGrid smallGrid smallGrid";
+  }
 
 .projectsPhoto img {
   transition: all 0.5s ease-out;
@@ -182,8 +186,15 @@ main {
   object-position: bottom;
 }
 
-.homefarmGrid {
-  grid-area: 1 / 1 / span 2 / span 2;
+.largeGrid {
+  grid-area: largeGrid;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.smallGrid {
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -253,6 +264,18 @@ img.homefarmImage:hover {
   background: radial-gradient(at left top, #5D737E 0%, #010101 60%) !important;
 }
 
+.caltechHeader {
+  background: radial-gradient(at left top, #FF6C0C 0%, #010101 60%) !important;
+}
+
+.smartFlushHeader {
+  background: radial-gradient(at left top, #9279BA 0%, #010101 60%) !important;
+}
+
+.davisHeader {
+  background: radial-gradient(at left top, #003365 0%, #010101 60%) !important;
+}
+
 .top {
   display: inline-flex;
   max-width: 75%;
@@ -299,6 +322,16 @@ img.homefarmImage:hover {
   height: 500px;
   width: auto;
   background-color: transparent;
+}
+
+.ct1pic {
+  height: 450px !important;
+  width: auto !important;
+  border-radius: 25px;
+}
+
+.round {
+  border-radius: 25px;
 }
 
 .bdabCurve {
@@ -437,7 +470,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.toast {
+/* .toast {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -505,7 +538,7 @@ nav a:hover {
   box-shadow: -9px -5px 18px 0px rgba(0,0,0,0.56);
   -webkit-box-shadow: -9px -5px 18px 0px rgba(0,0,0,0.56);
   -moz-box-shadow: -9px -5px 18px 0px rgba(0,0,0,0.56);
-}
+} */
 
 /* FOR TABS */
 
@@ -547,6 +580,44 @@ nav a:hover {
   border-top-right-radius: 8px;
 }
 
+.davisTabs label {
+  background: #003365;
+}
+
+.ct1Tabs label {
+  width: 16.667%;
+  background: #b05600;
+}
+
+.flushTabs label {
+  width: 16.667%;
+  background: #732F96;
+}
+
+.davisTabs input[type="radio"]:checked + label {
+  background: #2A52BE !important;
+}
+
+.ct1Tabs input[type="radio"]:checked + label {
+  background: #e57000 !important;
+}
+
+.flushTabs input[type="radio"]:checked + label {
+  background: #9768b6 !important;
+}
+
+.davisTabs .tab {
+  min-height: 240px !important;
+}
+
+.ct1Tabs .tab {
+  min-height: 270px !important;
+}
+
+.flushTabs .tab {
+  min-height: 235px !important;
+}
+
 .mytabs .tab {
   width: 100%;
   padding-bottom: 10px;
@@ -556,7 +627,7 @@ nav a:hover {
   background: #fff;
   order: 1;
   display: none;
-  min-height: 225px;
+  min-height: 235px;
 }
 
 .mytabs .tab h2 {
@@ -567,9 +638,13 @@ nav a:hover {
 }
 
 .mytabs .tab ul,
-.mytabs .tab p {
+.mytabs .tab p{
   font-size: 1.2em !important;
   padding-left: 10px;
+}
+
+.mytabs .tab ul ul li {
+  font-size: 1.2rem;
 }
 
 .mytabs .tab ul {
@@ -634,7 +709,8 @@ nav a:hover {
   overflow-x: scroll;
 }
 
-.prodImgChild img {
+.prodImgChild img,
+.prodImgChild video {
   margin: 10px 50px;
   border: black 1px solid;
 }

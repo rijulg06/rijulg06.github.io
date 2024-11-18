@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFlush</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="projectHeader smartFlushHeader">
+    <header class="projectNav">
+      <a href="./index.html">
+        <img class="logo" src="logoWhite.png" alt="Logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="Rijul Garg - Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+    <div class="top">
+      <div class="homefarmLeft">
+        <img src="toiletFlushpic.png" alt="HomeFarm Product Images" class="homefarmPic round">
+      </div>
+      <div class="homefarmRight">
+        <h1><i>SmartFlush</i></h1>
+        <p>Cleaner flush, healthier home.<br><span>Stopping germs at the source, SmartFlush automatically closes and flushes toilets to prevent harmful particles from spreading, bringing affordable hygiene to all.</span></p>
+      </div>
+    </div>
+    <div class="lineBreak">
+      <hr>
+    </div>
+    <div class="skills">
+      <div class="skillsChild">
+        <div class="skillsTable">
+          <h3><i>ROLE</i></h3>
+          <p>Ideator</p>
+          <p>Designer</p>
+          <p>Builder</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>TIMELINE</i></h3>
+          <p>January 2024 - Present</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>SKILLS</i></h3>
+          <p>C++</p>
+          <p>Soldering</p>
+          <p>Circuits</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>TOOLS</i></h3>
+          <p>Arduino</p>
+          <p>Tinkercad</p>
+          <p>Voltage meter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projectBody">
+    <div class="projOverview">
+      <div class="projBodyLeft">
+        <h1><i>Overview</i></h1>
+      </div>
+      <div class="projBodyRight">
+        <p class="margin">People are often unaware of the invisible lurking particles that are flung into the air with every flush of the toilet. (Watch this <a href="https://youtu.be/hTojTHjUckA?t=7" target="_blank" style="color:blue">video</a>!) These particles often contain fecal pathogens and health hazards that quickly spread in a restroom.</p>
+        <p class="margin">To address this overlooked issue, I have ideated, designed, simulated, and prototyped a device that will be able to automatically close its lid and flush the toilet after a person stands up. This will significantly dampen the “toilet plume” and stop the spread of harmful germs and bacteria.</p>
+        <p>One primary goal of this project was to ensure the device’s affordability. This will allow SmartFlush to be implemented in all homes, regardless of socioeconomic status, and even in public restrooms.</p>
+      </div>
+    </div>
+    <div class="tabsContent">
+      <div class="lineBreak2">
+      </div>
+      <!-- Tabs -->
+      <div class="mytabs flushTabs">
+        <input type="radio" id="t1" name="mytabs" checked="checked">
+        <label for="t1">Problem</label>
+        <div class="tab">
+          <h2>What is the problem?</h2>
+          <p>There are several studies that show that airborne particles spew from a toilet after flushing it. These particles can contain germs and bacteria that can land on toothbrushes and other toiletries, people, and the toilet’s surroundings. In fact, <a href="https://www.nature.com/articles/s41598-022-24686-5#Sec2" target="_blank" style="color:blue">this study</a> has shown that this “toilet plume” can reach heights of 1.5m within 8 seconds of a flush!</p>
+        </div>
+        <input type="radio" id="o" name="mytabs">
+        <label for="o">Idea</label>
+        <div class="tab">
+          <h2>What is my idea?</h2>
+          <p><a href="https://www.ajicjournal.org/article/S0196-6553(23)00820-9/fulltext" target="_blank" style="color:blue">Studies</a> have shown that closing the lid of the toilet prior to flushing significantly reduces the toilet plume effect. However, this practice is not in most people’s habits. Thus, I have ideated an automatic toilet lid closer. This device will be able to detect when a person has sat down and when they’ve stood up, automatically closing the lid and flushing the toilet.</p>
+        </div>
+        <!--
+        <input type="radio" id="a" name="mytabs">
+        <label for="a">Research</label>
+        <div class="tab">
+          <h2>What else is out there?</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio! Iure accusamus maxime pariatur corporis voluptate temporibus aspernatur tempora, odit, iusto eveniet laboriosam quae eos consectetur sint cum quisquam sit, natus vel magnam. Impedit, ab. Ex, optio repellendus. Consequatur, suscipit.</p>
+        </div>
+        -->
+        <input type="radio" id="s1" name="mytabs">
+        <label for="s1">Analysis</label>
+        <div class="tab">
+          <h2>Are there any other products like this on the market?</h2>
+          <p>Based on my research, there are toilets that have the ability to automatically close their lid and flush (see <a href="https://www.totousa.com" target="_blank" style="color:blue">TOTO toilets</a>). However, these toilets are meant more for luxury than practicality. They are incredibly expensive and only offer these features for lavish purposes.</p>
+        </div>
+        <input type="radio" id="s2" name="mytabs">
+        <label for="s2">Strategy</label>
+        <div class="tab">
+          <h2>What is the strategy?</h2>
+          <ul>
+            <li>Design a device that will be able to take force/load input and translate into movement</li>
+            <li>Make sure it’s cheap and easy to install:</li>
+            <ul class="insideList">
+              <li>Will allow access for everyone</li>
+              <li>No need to replace entire toilet unit</li>
+            </ul>
+            <li>Long term: copyright idea + sell device</li>
+          </ul>
+        </div>
+        <input type="radio" id="t2" name="mytabs">
+        <label for="t2">Steps</label>
+        <div class="tab">
+          <h2>What steps have I taken?</h2>
+          <ul>
+            <li>Learned Arduino and C++ for its IDE</li>
+            <li>Utilized Tinkercad simulation software:</li>
+            <ul>
+              <li>Analyzed what parts I needed</li>
+              <li>Wrote logic for lid + flush</li>
+            </ul>
+            <li>Ordered parts from Amazon and built prototype to confirm simulation</li>
+          </ul>
+        </div>
+        <input type="radio" id="results" name="mytabs">
+        <label for="results">Success</label>
+        <div class="tab">
+          <h2>What does success look like?</h2>
+          <p>Success for this device looks like a sophisticated end product that will be fully integrated with the toilet. I envision a product that buyers can simply replace their old toilet covers with (similar to bidet products). Ensuring SmartFlush’s affordability will provide all homes and public facilities with protection from disease and infection.</p>
+        </div>
+      </div>
+      <div class="lineBreak2">
+      </div>
+    </div>
+    <div class="prodImg">
+      <h1>Simulations + Arduino + Soldering!</h1>
+      <div class="prodImgChild">
+        <video controls class="prodImgLeft"><source src="sfVideo.mov"></video>
+        <img src="sf1.heic" alt="">
+        <img src="sf8.png" alt="">
+        <img src="sf3.heic" alt="">
+        <img src="sf6.heic" alt="">
+        <img src="sf4.heic" alt="">
+        <img class="prodImgRight" src="sf5.heic" alt="">
+      </div>
+    </div>
+
+    <!--
+    <div class="projSlide">
+      <div class="slider-container">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <span id="slider-image-4"></span>
+        <span id="slider-image-5"></span>
+        <div class="image-container">
+          <img src="rijulPicBlack.jpg" alt="Transparency" class="slider-image">
+          <img src="rijulPicWhite.jpg" alt="Opportunity" class="slider-image">
+          <img src="rijulPicBlack.jpg" alt="Analysis" class="slider-image">
+          <img src="rijulPicWhite.jpg" alt="Strategy" class="slider-image">
+          <img src="rijulPicBlack.jpg" alt="Transformation" class="slider-image">
+        </div>
+        <div class="button-container">
+          <a href="#slider-image-1" class="slider-button"></a>
+          <a href="#slider-image-2" class="slider-button"></a>
+          <a href="#slider-image-3" class="slider-button"></a>
+          <a href="#slider-image-4" class="slider-button"></a>
+          <a href="#slider-image-5" class="slider-button"></a>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</body>
+</html>

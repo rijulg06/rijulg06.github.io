@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRI Tumor Classification</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="projectHeader davisHeader">
+    <header class="projectNav">
+      <a href="./index.html">
+        <img class="logo" src="logoWhite.png" alt="Logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="Rijul Garg - Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+    <div class="top">
+      <div class="homefarmLeft">
+        <img src="tumor6.png" alt="HomeFarm Product Images" class="homefarmPic round">
+      </div>
+      <div class="homefarmRight">
+        <h1><i>MRI Tumor Classification</i></h1>
+        <p>Internship @ UC Davis<br><span>Extracting and utilizing big data from MRI images to classify tumors.</span></p>
+        <p><a href="https://www.cancerimagingarchive.net/collection/ucsf-pdgm/" target="_blank">Dataset</a></p>
+      </div>
+    </div>
+    <div class="lineBreak">
+      <hr>
+    </div>
+    <div class="skills">
+      <div class="skillsChild">
+        <div class="skillsTable">
+          <h3><i>ROLE</i></h3>
+          <p>Research Intern</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>TIMELINE</i></h3>
+          <p>March 2024 - Present</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>SKILLS</i></h3>
+          <p>Parallel computing</p>
+          <p>Data cleansing</p>
+          <p>Data wrangling</p>
+          <p>Data visualization</p>
+          <p>Data classification</p>
+          <p>Machine learning</p>
+        </div>
+        <div class="skillsTable">
+          <h3><i>TOOLS</i></h3>
+          <p>Python</p>
+          <p>R</p>
+          <p>Docker</p>
+          <p>Jupyter Notebook</p>
+          <p>PyRadiomics</p>
+          <p>Pandas</p>
+          <p>Numpy</p>
+          <p>Scikit-Learn</p>
+          <p>UMAP/t-SNE/PCA</p>
+          <p>Plotly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projectBody">
+    <div class="projOverview">
+      <div class="projBodyLeft">
+        <h1><i>Overview</i></h1>
+      </div>
+      <div class="projBodyRight">
+        <p class="margin">At this internship, I’m working with UC Davis <a href="https://health.ucdavis.edu/radiology/team/43066/felipe-godinez-radiology-physics-sacramento" target="_blank" style="color: blue">Professor Felipe Godinez</a> to apply computer science in the field of radiology.</p>
+        <p>The end goal of this project is to be able to use MRI images to classify certain types of tumors with a high accuracy. This will allow for non-invasive, and thus, safer tumor diagnosis, prognosis, and better patient treatment.</p>
+      </div>
+    </div>
+    <div class="tabsContent">
+      <div class="lineBreak2">
+      </div>
+      <!-- Tabs -->
+      <div class="mytabs davisTabs">
+        <input type="radio" id="t1" name="mytabs" checked="checked">
+        <label for="t1">Extraction</label>
+        <div class="tab">
+          <h2>How was the data extracted?</h2>
+          <p>I first utilized the library PyRadiomics (through Docker) to extract over 1000 image features from each of the 500+ tumor MRIs in the UCSF-PGDM dataset, while applying an N4 Bias Field Correction algorithm to the images. To accomplish this in a more efficient manner, I made use of ten out of my eleven CPU cores. I still faced heavy computational constraints, which I had to overcome through various methods.</p>
+        </div>
+        <input type="radio" id="o" name="mytabs">
+        <label for="o">Wrangling/Cleansing</label>
+        <div class="tab">
+          <h2>How was the data wrangled and cleaned?</h2>
+          <p>I now had all of the image features in a large CSV. I then wrangled and cleansed this data to make it usable:</p>
+          <ul>
+            <li>Aggregating data from different MRI types</li>
+            <li>Removing N/A values while ensuring the most amount of data was preserved</li>
+            <li>Removing duplicate columns</li>
+            <li>Removing unusable data types</li>
+          </ul>
+        </div>
+        <!--
+        <input type="radio" id="a" name="mytabs">
+        <label for="a">Research</label>
+        <div class="tab">
+          <h2>What else is out there?</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio! Iure accusamus maxime pariatur corporis voluptate temporibus aspernatur tempora, odit, iusto eveniet laboriosam quae eos consectetur sint cum quisquam sit, natus vel magnam. Impedit, ab. Ex, optio repellendus. Consequatur, suscipit.</p>
+        </div>
+        -->
+        <input type="radio" id="s1" name="mytabs">
+        <label for="s1">Visualization</label>
+        <div class="tab">
+          <h2>How was the data visualization?</h2>
+          <p>Due to the substantial dimensionality of the extracted data, I had to apply the techniques of Uniform Manifold Approximation and Projection (UMAP), T-distributed Stochastic Neighbor Embedding (t-SNE), and Principal Component Analysis (PCA). These techniques allowed me to visualize and analyze the data for any patterns.</p>
+        </div>
+        <input type="radio" id="s2" name="mytabs">
+        <label for="s2">Classification</label>
+        <div class="tab">
+          <h2>How was the data classified?</h2>
+          <p>After confirming a relationship within the data (by analyzing various graphs), I applied several machine learning algorithms to the data, attempting to achieve a high accuracy of tumor classification. While BART’s accuracy was considerable, random decision trees achieved an accuracy of 92.41% after tuning the hyperparameters.</p>
+        </div>
+        <input type="radio" id="t2" name="mytabs">
+        <label for="t2">Next steps</label>
+        <div class="tab">
+          <h2>What are the next steps?</h2>
+          <p>I am now collaborating with Dr. Godinez and UCLA <a href="https://ph.ucla.edu/about/faculty-staff-directory/michele-guindani" target="_blank" style="color: blue">Professor Michele Guindani</a> on their upcoming publication, where I am implementing random decision and linear regression trees to compare their performance with the BART algorithm.</p>
+        </div>
+      </div>
+      <div class="lineBreak2">
+      </div>
+    </div>
+    <div class="prodImg">
+      <h1>Data visualization!</h1>
+      <div class="prodImgChild">
+        <img class="prodImgLeft" src="davis1.png" alt="">
+        <img src="davis2.png" alt="">
+        <img src="davis3.png" alt="">
+        <img src="davis4.png" alt="">
+        <img src="davis5.png" alt="">
+        <img class="prodImgRight" src="davis6.png" alt="">
+      </div>
+    </div>
+
+    <!--
+    <div class="projSlide">
+      <div class="slider-container">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <span id="slider-image-4"></span>
+        <span id="slider-image-5"></span>
+        <div class="image-container">
+          <img src="rijulPicBlack.jpg" alt="Transparency" class="slider-image">
+          <img src="rijulPicWhite.jpg" alt="Opportunity" class="slider-image">
+          <img src="rijulPicBlack.jpg" alt="Analysis" class="slider-image">
+          <img src="rijulPicWhite.jpg" alt="Strategy" class="slider-image">
+          <img src="rijulPicBlack.jpg" alt="Transformation" class="slider-image">
+        </div>
+        <div class="button-container">
+          <a href="#slider-image-1" class="slider-button"></a>
+          <a href="#slider-image-2" class="slider-button"></a>
+          <a href="#slider-image-3" class="slider-button"></a>
+          <a href="#slider-image-4" class="slider-button"></a>
+          <a href="#slider-image-5" class="slider-button"></a>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</body>
+</html>
